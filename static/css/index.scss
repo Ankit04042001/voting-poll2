@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+$gradiant-left:#c89a5d;
+$gradiant-right:#349031;
+
+$color:(
+    primary:#0078bf,
+    primary-light:lighten(#0078bf, 8%),
+    active-nav-color:lighten(#062a47, 4%),
+    nav-color:lighten(#062a47, 20%),
+    
+);
+
+
+@function color($mycolor){
+    @return map-get($color, $mycolor);
+}
+
+html,body{
+    min-height: 100vh;
+    max-height: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+nav{
+    padding: 0;
+    background-image: linear-gradient(to bottom right, $gradiant-left, $gradiant-right);
+
+    .navbar-toggler{
+        border: none;
+        box-shadow: none;
+        .navbar-toggler-icon{
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+    }
+
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+    .navbar-brand{
+        height: fit-content;
+        padding: 0;
+
+        img{
+            height: 5rem;
+        }
+    }
+
+    .navbar-nav{
+
+        .nav-link{
+            display: block;
+            margin-left: 10px;
+            font-size: 1.3rem;
+            color: color(nav-color);
+        
+        }
+        .nav-link.active{
+            color:color(active-nav-color);
+        }
+        
+    }
+}
+
+main{
+    margin-top: 2rem;
+
+    h1{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .leader{
+        margin-top: 2rem;
+        padding:0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        li{
+            position: relative;
+            padding:0;
+            figure{
+                padding: 0;
+                img{
+                    width:200px;
+                    height: 200px;
+                    border-radius: 50%;
+                }
+            }
+            figcaption{
+                text-align: center;
+                font-size: 1.2rem;
+                font-weight: 800;
+            }
+
+            a{
+                position: absolute;
+                left:0;
+                top:0;
+                display:block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}
+
+.container{
+    padding-top:40px;
+    padding-bottom: 100px;
+    min-height:100%;
+    
+}
+
+
+footer{
+    padding: 0.5rem;
+    width: 100%;
+    position: fixed;
+    left:0;
+    right:0;
+    bottom: 0;
+    margin-bottom:0px;
+    text-align: center;
+    font-weight: 600;
+    background-image: linear-gradient(to bottom right, $gradiant-left, $gradiant-right);
+}
+
+
+
+/********************************    resoponsive design   ************************************/
+
+
+
+$tab:576px;
+$desktop:960px;
+
+
+@mixin tab {
+    @media (min-width: #{$tab}){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+/********************************    navigation   ************************************/
+
+
+@include desktop{
+    nav{
+        .navbar-brand{
+            display: block;
+            margin-left: 6rem;
+        
+            img{
+                height: 7rem;
+            }
+        }
+
+        .navbar-nav{
+
+            .nav-link{
+                display: block;
+                margin-right: 2rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+
+    
+main{
+    margin-top: 2rem;
+
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .leader{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+
+}
+
+}

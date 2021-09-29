@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+        <main>
+            <h1>कौन होगा अगला प्रधानमंत्री ? अपने पसंदीदा उमीदवार को वोट दीजिए |</h1>
+            <ul class="leader">
+            {% for leader in leader %}
+                <li>
+                    <figure><img src="{{leader.image.url}}" alt="Narendra Modi Image"></figure>
+                    <figcaption>{{leader.name}}<br>वोट प्राप्त : {{leader.vote}}</figcaption>
+                    <a href="{% url 'dashboard' %}"></a>
+                </li>
+            {% endfor %}    
+            </ul>
+        </main>
+    </div>
+{% endblock %}

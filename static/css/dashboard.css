@@ -1,0 +1,49 @@
+.card {
+  padding: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 0.1px 0.1px 5px 1px #c89a5d;
+          box-shadow: 0.1px 0.1px 5px 1px #c89a5d;
+}
+
+.card img {
+  display: block;
+  height: 150px;
+  width: 150px;
+}
+
+.card .card-body .card-title {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.card .card-body input {
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#c89a5d), to(#349031));
+  background-image: linear-gradient(to bottom right, #c89a5d, #349031);
+}
+
+/********************************    resoponsive design   ************************************/
+/********************************    card   ************************************/
+@media (min-width: 960px) {
+  .container {
+    width: 70%;
+  }
+  .card {
+    width: 600px;
+  }
+  .card img {
+    width: 200px;
+    height: 200px;
+  }
+  .card .card-body {
+    margin-left: 40px;
+  }
+}
+/*# sourceMappingURL=dashboard.css.map */
