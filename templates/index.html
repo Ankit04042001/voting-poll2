@@ -9,7 +9,7 @@
             {% for leader in leader %}
                 <li>
                     <figure><img src="{{leader.image.url}}" alt="Narendra Modi Image"></figure>
-                    <figcaption>{{leader.name}}<br>वोट प्राप्त : {{leader.vote}}</figcaption>
+                    <figcaption>{{leader.name}}<br>{% if request.session.isVoted == "yes" %}वोट प्राप्त : {{leader.vote}}{% endif %}</figcaption>
                     <a href="{% url 'dashboard' %}"></a>
                 </li>
             {% endfor %}    

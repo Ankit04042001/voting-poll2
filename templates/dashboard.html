@@ -32,7 +32,9 @@
           <h5 class="card-title">{{leader.name}}</h5>
           <p class="party">पार्टी : {{leader.party}}</p>
           <p class="nishan">चुनाव चिह्न : {{leader.nishan}}</p>
-          <p class="vote">वोट प्राप्त : {{leader.vote}}</p>
+          {% if request.session.isVoted == "yes" %}
+            <p class="vote">वोट प्राप्त : {{leader.vote}}</p>
+          {% endif %}
           <form action="/vote/" method="POST">
             {% csrf_token %}
             <input type="text" name="id" value="{{leader.id}}" aria-hidden="true" hidden>

@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.http import request, HttpResponse
 from .models import TotalVote, Leader
 from django.contrib import messages
+from django.contrib.sessions.backends.db import SessionStore
 # Create your views here.
 
 def index(request):
@@ -22,6 +23,7 @@ def vote(request):
         if request.session.get('isVoted') == None:
             request.session['isVoted'] = "yes"
             request.session.set_expiry(60*60*24*365)
+            request.session.save()
             totalVote.total_vote += 1
             leader_vote.vote += 1
             totalVote.save()

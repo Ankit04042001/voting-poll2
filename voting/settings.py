@@ -155,4 +155,9 @@ SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
+SESSION_COOKIE_HTTPONLY = True
+
+SESSION_COOKIE_AGE = 60*60*24*365
+
+
 
