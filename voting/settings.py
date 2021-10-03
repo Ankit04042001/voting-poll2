@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mathfilters',
     'voting_poll',
     'cloudinary',
     'cloudinary_storage',
@@ -158,6 +159,8 @@ DATABASES['default'].update(db_from_env)
 SESSION_COOKIE_HTTPONLY = True
 
 SESSION_COOKIE_AGE = 60*60*24*365
+
+CSRF_FAILURE_VIEW ='voting_poll.views.csrf_failure'
 
 
 

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -5,119 +6,203 @@
           box-sizing: border-box;
 }
 
+.col-1point5 {
+  width: 12.5%;
+}
+
+.col-3point5 {
+  width: 29.1%;
+}
+
+.col-7point5 {
+  width: 62.5%;
+}
+
 html, body {
   min-height: 100vh;
-  max-height: auto;
   width: 100%;
   overflow-x: hidden;
 }
 
-nav {
+.navbar {
   padding: 0;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#c89a5d), to(#349031));
-  background-image: linear-gradient(to bottom right, #c89a5d, #349031);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#b6cbd6), to(#093248));
+  background-image: linear-gradient(to bottom right, #b6cbd6, #093248);
+  font-family: serif !important;
+  font-weight: 200;
 }
 
-nav .navbar-toggler {
+.navbar .navbar-toggler {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-nav .navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-nav .navbar-toggler:focus {
+.navbar .navbar-toggler:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-nav .navbar-brand {
+.navbar .navbar-brand {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 0;
 }
 
-nav .navbar-brand img {
+.navbar .navbar-brand img {
   height: 5rem;
 }
 
-nav .navbar-nav .nav-link {
+.navbar .navbar-nav .nav-link {
   display: block;
   margin-left: 10px;
   font-size: 1.3rem;
-  color: #0e62a5;
+  color: #ffffff;
 }
 
-nav .navbar-nav .nav-link.active {
-  color: #08355a;
-}
-
-main {
-  margin-top: 2rem;
-}
-
-main h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-main .leader {
-  margin-top: 2rem;
-  padding: 0;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style: none;
-}
-
-main .leader li {
-  position: relative;
-  padding: 0;
-}
-
-main .leader li figure {
-  padding: 0;
-}
-
-main .leader li figure img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-
-main .leader li figcaption {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 800;
-}
-
-main .leader li a {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
+.navbar .navbar-nav .nav-link.active {
+  color: #b6cbd6;
 }
 
 .container {
   padding-top: 40px;
   padding-bottom: 100px;
   min-height: 100%;
+}
+
+main h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #093248;
+  color: white;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+main h2 {
+  margin-top: 10px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #093248;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  word-break: keep-all;
+  white-space: nowrap;
+  word-spacing: 1px;
+}
+
+main h2 div {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  word-break: keep-all;
+  white-space: nowrap;
+  word-spacing: 0px;
+}
+
+main .candidate-heading .candidate {
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 200;
+  border-right: 1px solid #fff;
+  background-color: #093248;
+  color: white;
+  white-space: nowrap;
+}
+
+main .candidate-list, main .nota-row {
+  border-top: 2px solid #000;
+  border-bottom: 5px solid #000;
+  border-right: none;
+  border-left: none;
+}
+
+main .candidate-list .candidate, main .candidate-list .nota, main .nota-row .candidate, main .nota-row .nota {
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-right: 1px solid #000;
+  color: #000;
+  background-color: #e2d7d7;
+  white-space: nowrap;
+}
+
+main .candidate-list .candidate img, main .candidate-list .nota img, main .nota-row .candidate img, main .nota-row .nota img {
+  height: 25px;
+}
+
+main .candidate-list .candidate span, main .candidate-list .nota span, main .nota-row .candidate span, main .nota-row .nota span {
+  display: inline-block;
+  margin-right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+main .candidate-list .candidate form, main .candidate-list .nota form, main .nota-row .candidate form, main .nota-row .nota form {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+main .candidate-list .candidate form button, main .candidate-list .nota form button, main .nota-row .candidate form button, main .nota-row .nota form button {
+  display: inline-block;
+  width: 40px;
+  height: 18px;
+}
+
+main .candidate-list .candidate:last-child, main .nota-row .candidate:last-child {
+  border: none;
+}
+
+main .nota-row {
+  border: 1px solid #000;
+  border-right: none;
+  border-left: none;
+}
+
+main .nota-row .nota {
+  border: none;
 }
 
 footer {
@@ -129,25 +214,90 @@ footer {
   bottom: 0;
   margin-bottom: 0px;
   text-align: center;
+  color: white;
   font-weight: 600;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#c89a5d), to(#349031));
-  background-image: linear-gradient(to bottom right, #c89a5d, #349031);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#b6cbd6), to(#093248));
+  background-image: linear-gradient(to bottom right, #b6cbd6, #093248);
 }
 
 /********************************    resoponsive design   ************************************/
 /********************************    navigation   ************************************/
-@media (min-width: 960px) {
-  nav .navbar-brand {
-    display: block;
+@media (min-width: 750px) {
+  .navbar .navbar-brand {
     margin-left: 6rem;
   }
-  nav .navbar-brand img {
+  .navbar .navbar-brand img {
     height: 7rem;
   }
-  nav .navbar-nav .nav-link {
+  .navbar .navbar-nav .nav-link {
     display: block;
+    margin-left: 8rem;
+    font-size: 1.7rem;
+  }
+  .container {
+    width: 60%;
+  }
+  main {
+    margin-top: 1rem;
+  }
+  main h1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  main h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  main h2 div {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  main .candidate-heading .candidate {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  main .candidate-list, main .nota-row {
+    border-top: 2.5px solid #000;
+    border-bottom: 5px solid #000;
+  }
+  main .candidate-list .candidate, main .candidate-list .nota, main .nota-row .candidate, main .nota-row .nota {
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-right: 2px solid #000;
+  }
+  main .candidate-list .candidate img, main .candidate-list .nota img, main .nota-row .candidate img, main .nota-row .nota img {
+    height: 35px;
+  }
+  main .candidate-list .candidate span, main .candidate-list .nota span, main .nota-row .candidate span, main .nota-row .nota span {
+    position: relative;
+    top: 2px;
+    margin-right: 20px;
+    width: 15px;
+    height: 15px;
+  }
+  main .candidate-list .candidate button, main .candidate-list .nota button, main .nota-row .candidate button, main .nota-row .nota button {
+    width: 50px;
+    height: 20px;
+  }
+  main .nota-row {
+    border: 1px solid #000;
+    border-right: none;
+    border-left: none;
+  }
+  main .nota-row .nota {
+    border: none;
+  }
+}
+
+@media (min-width: 980px) {
+  .navbar .navbar-nav .nav-link {
+    display: block;
+    margin-left: 1rem;
     margin-right: 2rem;
-    font-size: 1.5rem;
+  }
+  .container {
+    width: 50%;
   }
   main {
     margin-top: 2rem;
@@ -156,16 +306,49 @@ footer {
     font-size: 2rem;
     font-weight: 600;
   }
-  main .leader {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  main h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+  main h2 div {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  main .candidate-heading .candidate {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  main .candidate-list, main .nota-row {
+    border-top: 3px solid #000;
+    border-bottom: 6px solid #000;
+  }
+  main .candidate-list .candidate, main .candidate-list .nota, main .nota-row .candidate, main .nota-row .nota {
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-right: 2px solid #000;
+  }
+  main .candidate-list .candidate img, main .candidate-list .nota img, main .nota-row .candidate img, main .nota-row .nota img {
+    height: 35px;
+  }
+  main .candidate-list .candidate span, main .candidate-list .nota span, main .nota-row .candidate span, main .nota-row .nota span {
+    position: relative;
+    top: 2px;
+    margin-right: 20px;
+    width: 15px;
+    height: 15px;
+  }
+  main .candidate-list .candidate button, main .candidate-list .nota button, main .nota-row .candidate button, main .nota-row .nota button {
+    width: 60px;
+    height: 25px;
+  }
+  main .nota-row {
+    border: 1px solid #000;
+    border-right: none;
+    border-left: none;
+  }
+  main .nota-row .nota {
+    border: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

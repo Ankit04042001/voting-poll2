@@ -1,19 +1,56 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load mathfilters %}
 {% block content %}
-<div class="container">
+    <div class="container">
         <main>
-            <h1>कौन होगा अगला प्रधानमंत्री ? अपने पसंदीदा उमीदवार को वोट दीजिए |</h1>
-            <ul class="leader">
-            {% for leader in leader %}
-                <li>
-                    <figure><img src="{{leader.image.url}}" alt="Narendra Modi Image"></figure>
-                    <figcaption>{{leader.name}}<br>{% if request.session.isVoted == "yes" %}वोट प्राप्त : {{leader.vote}}{% endif %}</figcaption>
-                    <a href="{% url 'dashboard' %}"></a>
-                </li>
-            {% endfor %}    
-            </ul>
+            <h1>ग्राम पंचायत राज पूर्वी हरिहांस  </h1>
+            <h2>कौन होगा अगला मुखिया ?<br><div>अपने पसंदीदा उम्मीदवार को वोट दीजिये</div></h2>
+    
+            <div class="row candidate-heading">
+                <div class="col-1point5 candidate">क्रम सं.</div>
+                <div class="col-3point5 candidate">उम्मीदवार के नाम</div>
+                <div class="col-2 candidate">फोटो</div>
+                <div class="col-2 candidate">चुनाव चिह्न</div>
+                <div class="col-3 candidate">EVM का बटन</div>
+            </div>
+                {% for leader in leader %}
+                    {% if forloop.last %}
+                        <div class="row nota-row">
+                            <div class="col-1point5 nota">{{leader.order}}</div>
+                            <div class="col-7point5 nota">{{leader.name}}</div>
+                            <div class="col-3 nota">
+                                <span></span>
+                                <form action="/vote/" method="POST">
+                                    {% csrf_token %}
+                                    <input type="text" name="id" value="{{leader.id}}" aria-hidden="true" hidden>
+                                    <button type="submit" class="btn btn-primary"></button>
+                                </form>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="row candidate-list">
+                            <div class="col-1point5 candidate">{{leader.order}}</div>
+                            <div class="col-3point5 candidate">{{leader.name}}</div>
+                            <div class="col-2 candidate">
+                                {% if leader.image %}
+                                    <img src="{{leader.image.url}}" alt="{{leader.name}} Image">
+                                {% endif %}
+                            </div>
+                            <div class="col-2 candidate">
+                                <img src="{{leader.nishan.url}}" alt="{{leader.name}} Chunav Chihn">
+                            </div>
+                            <div class="col-3 candidate">
+                                <span></span>
+                                <form action="/vote/" method="POST">
+                                    {% csrf_token %}
+                                    <input type="text" name="id" value="{{leader.id}}" aria-hidden="true" hidden>
+                                    <button type="submit" class="btn btn-primary"></button>
+                                </form>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
         </main>
-    </div>
+    </div> 
 {% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable Cookie</title>
+    <style>
+        .btn{
+            box-sizing: border-box;
+            display: inline-block;
+            margin-left: 20px;
+            padding: 5px 10px;
+            width: fit-content;
+            text-decoration: none;
+            font-size: 1.2rem;
+            background-color: rgb(17, 168, 228);
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    {{message}}
+    <a type="btn" class="btn" href="{% url 'dashboard' %}">Go Back</a>
+</body>
+</html>

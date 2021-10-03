@@ -1,12 +1,12 @@
-$gradiant-left:#c89a5d;
-$gradiant-right:#349031;
+$gradiant-left:#b6cbd6;
+$gradiant-right:#093248;
 
 .card{
     padding:20px;
     width:100%;
     border:none;
     border-radius: 20px;
-    box-shadow: 0.1px 0.1px 5px 1px #c89a5d;
+    box-shadow: 0.1px 0.1px 5px 1px #b6cbd6;
 
     img{
         display: block;
@@ -15,6 +15,11 @@ $gradiant-right:#349031;
     }
 
     .card-body{
+        .nishan img{
+            display:inline-block;
+            width:50px;
+            height:50px;
+        }
 
         .card-title{
             margin-bottom: 20px;

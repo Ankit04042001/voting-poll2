@@ -33,4 +33,8 @@ def vote(request):
             messages.error(request, 'You Voted already')
     return render(request, 'dashboard.html', {'leader':leader})
 
+def csrf_failure(request, reason=""):
+    ctx = {'message':'Please Enable cookie to vote and try again !'}
+    return render(request,'cookie.html',ctx)
+
 

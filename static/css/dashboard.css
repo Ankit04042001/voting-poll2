@@ -3,14 +3,20 @@
   width: 100%;
   border: none;
   border-radius: 20px;
-  -webkit-box-shadow: 0.1px 0.1px 5px 1px #c89a5d;
-          box-shadow: 0.1px 0.1px 5px 1px #c89a5d;
+  -webkit-box-shadow: 0.1px 0.1px 5px 1px #b6cbd6;
+          box-shadow: 0.1px 0.1px 5px 1px #b6cbd6;
 }
 
 .card img {
   display: block;
   height: 150px;
   width: 150px;
+}
+
+.card .card-body .nishan img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
 }
 
 .card .card-body .card-title {
@@ -25,8 +31,8 @@
   font-weight: 500;
   border: none;
   border-radius: 5px;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#c89a5d), to(#349031));
-  background-image: linear-gradient(to bottom right, #c89a5d, #349031);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#b6cbd6), to(#093248));
+  background-image: linear-gradient(to bottom right, #b6cbd6, #093248);
 }
 
 /********************************    resoponsive design   ************************************/

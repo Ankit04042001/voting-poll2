@@ -8,10 +8,9 @@ class TotalVote(models.Model):
     total_vote = models.BigIntegerField()
 
 class Leader(models.Model):
-    image = models.ImageField(upload_to = 'pics')
+    image = models.ImageField(upload_to = 'pics', blank=True, null=True)
     name = models.CharField(max_length=100)
-    party = models.CharField(max_length=100)
-    nishan = models.CharField(max_length=100)
+    nishan = models.ImageField(upload_to='pics', blank=True, null=True)
     vote = models.BigIntegerField()
     order = models.SmallIntegerField(default=0, editable=True)
 
