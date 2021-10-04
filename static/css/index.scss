@@ -187,10 +187,18 @@ main{
             form{
                 display: inline-block;
                 width:fit-content;
-                button{
+                .btn{
                     display: inline-block;
                     width:40px;
                     height:18px;
+                    transition: all 0.1s ease-in;
+                }
+                .btn.btn-primary:active,.btn.btn-primary:active{
+                    background-color:rgb(81, 221, 81);
+                    box-shadow: none;
+                    border:none;
+                    outline:none;
+                    transform: translate(2px, 2px);
                 }
             }
         }

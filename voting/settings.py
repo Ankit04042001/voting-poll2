@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import dj_database_url
 import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,10 +44,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'axes',
     'mathfilters',
     'voting_poll',
     'cloudinary',
     'cloudinary_storage',
+]
+
+AUTHENTICATION_BACKENDS = [
+    # AxesBackend should be the first backend in the AUTHENTICATION_BACKENDS list.
+    'axes.backends.AxesBackend',
+
+    # Django ModelBackend is the default authentication backend.
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +68,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'axes.middleware.AxesMiddleware',
 ]
 
 ROOT_URLCONF = 'voting.urls'
@@ -161,6 +173,10 @@ SESSION_COOKIE_HTTPONLY = True
 SESSION_COOKIE_AGE = 60*60*24*365
 
 CSRF_FAILURE_VIEW ='voting_poll.views.csrf_failure'
+
+AXES_ONLY_ADMIN_SITE = True
+
+AXES_RESET_ON_SUCCESS = True
 
 
 
