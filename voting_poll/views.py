@@ -1,13 +1,14 @@
 from django.shortcuts import redirect, render
 from django.http import request, HttpResponse
-from .models import TotalVote, Leader
+from .models import Audio, TotalVote, Leader
 from django.contrib import messages
 from django.contrib.sessions.backends.db import SessionStore
 # Create your views here.
 
 def index(request):
     leader = Leader.objects.all()
-    return render(request, 'index.html', {'leader':leader})
+    audio = Audio.objects.all()
+    return render(request, 'index.html', {'leader':leader, 'audio':audio})
 
 
 def dashboard(request):

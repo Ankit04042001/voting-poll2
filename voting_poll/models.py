@@ -2,6 +2,7 @@ from django.contrib.admin import options
 from django.db import models
 from django.db.models.expressions import OrderBy
 from django.db.models.fields import AutoField
+import cloudinary 
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
@@ -23,7 +24,7 @@ class Leader(models.Model):
         return self.name
 
 class Audio(models.Model):
-    click_sound = models.FileField(upload_to="audio")
+    click_sound = CloudinaryField(resource_type="raw")
 
     def __str__(self):
         return f"Click Sound : {self.click_sound}"

@@ -3,6 +3,13 @@
 {% load mathfilters %}
 {% block content %}
     <div class="container">
+        <span id="audio">{{audio.first.click_sound.url}}</span>
+    
+        <div id="voting-timing">
+            <div id="float-right">
+                <div id="end" aria-label="Time Left">Time Remaining : <span id="days"></span><span id="hours"></span><span id="mins"></span><span id="secs"></span></div>
+            </div>
+        </div>
         <main>
             <h1>ग्राम पंचायत राज पूर्वी हरिहांस  </h1>
             <h2>कौन होगा अगला मुखिया ?<br><div>अपने पसंदीदा उम्मीदवार को वोट दीजिये</div></h2>
@@ -47,10 +54,15 @@
                                     <button type="submit" class="btn btn-primary"></button>
                                 </form>
                                 <span></span>
+                                
                             </div>
                         </div>
                     {% endif %}
                 {% endfor %}
         </main>
     </div> 
+{% endblock %}
+
+{% block js %}
+    <script src="{% static '/js/index.js' %}" type="text/javascript"></script>
 {% endblock %}

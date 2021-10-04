@@ -70,9 +70,34 @@ html, body {
 }
 
 .container {
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 100px;
   min-height: 100%;
+}
+
+#audio {
+  display: none;
+}
+
+#voting-timing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+#voting-timing #float-right {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60px;
+  color: #093248;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 main h1 {
