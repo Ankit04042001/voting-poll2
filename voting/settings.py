@@ -160,7 +160,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-WHITENOISE_MANIFEST_STRICT = False
+# WHITENOISE_MANIFEST_STRICT = False
 
 MEDIA_URL = '/media/'
 
@@ -183,7 +183,7 @@ AXES_ONLY_ADMIN_SITE = True
 
 AXES_RESET_ON_SUCCESS = True
 
-DEBUG_PROPAGATE_EXCEPTIONS = True
+# DEBUG_PROPAGATE_EXCEPTIONS = True
 
 
 
