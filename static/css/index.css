@@ -176,6 +176,8 @@ main .candidate-list .candidate span, main .candidate-list .nota span, main .not
   height: 10px;
   background-color: #000;
   border-radius: 50%;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 main .candidate-list .candidate form, main .candidate-list .nota form, main .nota-row .candidate form, main .nota-row .nota form {
@@ -189,22 +191,38 @@ main .candidate-list .candidate form .btn, main .candidate-list .nota form .btn,
   display: inline-block;
   width: 40px;
   height: 18px;
-  -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
-}
-
-main .candidate-list .candidate form .btn.btn-primary:active, main .candidate-list .candidate form .btn.btn-primary:active, main .candidate-list .nota form .btn.btn-primary:active, main .candidate-list .nota form .btn.btn-primary:active, main .nota-row .candidate form .btn.btn-primary:active, main .nota-row .candidate form .btn.btn-primary:active, main .nota-row .nota form .btn.btn-primary:active, main .nota-row .nota form .btn.btn-primary:active {
-  background-color: #51dd51;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: none;
-  outline: none;
-  -webkit-transform: translate(2px, 2px);
-          transform: translate(2px, 2px);
 }
 
 main .candidate-list .candidate:last-child, main .nota-row .candidate:last-child {
   border: none;
+}
+
+main .candidate-list .candidate.evm, main .candidate-list .nota.evm, main .nota-row .candidate.evm, main .nota-row .nota.evm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .candidate-list .candidate.evm span, main .candidate-list .nota.evm span, main .nota-row .candidate.evm span, main .nota-row .nota.evm span {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+main .candidate-list .candidate.evm form, main .candidate-list .nota.evm form, main .nota-row .candidate.evm form, main .nota-row .nota.evm form {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+main .candidate-list .candidate.evm form:focus-within + span, main .candidate-list .nota.evm form:focus-within + span, main .nota-row .candidate.evm form:focus-within + span, main .nota-row .nota.evm form:focus-within + span {
+  background-color: green;
 }
 
 main .nota-row {

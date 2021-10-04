@@ -183,6 +183,8 @@ main{
                 height:10px;
                 background-color: #000;
                 border-radius: 50%;
+                transition: all 0.2s ease-out;;
+                
             }
             form{
                 display: inline-block;
@@ -191,14 +193,7 @@ main{
                     display: inline-block;
                     width:40px;
                     height:18px;
-                    transition: all 0.1s ease-in;
-                }
-                .btn.btn-primary:active,.btn.btn-primary:active{
-                    background-color:rgb(81, 221, 81);
-                    box-shadow: none;
-                    border:none;
-                    outline:none;
-                    transform: translate(2px, 2px);
+                    
                 }
             }
         }
@@ -206,6 +201,24 @@ main{
         .candidate:last-child{
             border:none;
         }
+
+        .candidate.evm,.nota.evm{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                order:1;
+            }
+            form{
+                order:2;
+            }
+
+            form:focus-within + span{
+                background-color: green;
+            }
+        }
+
+        
     }
 
     .nota-row{

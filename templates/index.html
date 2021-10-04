@@ -19,13 +19,13 @@
                         <div class="row nota-row">
                             <div class="col-1point5 nota">{{leader.order}}</div>
                             <div class="col-7point5 nota">{{leader.name}}</div>
-                            <div class="col-3 nota">
-                                <span></span>
+                            <div class="col-3 nota evm">
                                 <form action="/vote/" method="POST">
                                     {% csrf_token %}
                                     <input type="text" name="id" value="{{leader.id}}" aria-hidden="true" hidden>
                                     <button type="submit" class="btn btn-primary"></button>
                                 </form>
+                                <span></span>
                             </div>
                         </div>
                     {% else %}
@@ -40,13 +40,13 @@
                             <div class="col-2 candidate">
                                 <img src="{{leader.nishan.url}}" alt="{{leader.name}} Chunav Chihn">
                             </div>
-                            <div class="col-3 candidate">
-                                <span></span>
+                            <div class="col-3 candidate evm">
                                 <form action="/vote/" method="POST">
                                     {% csrf_token %}
                                     <input type="text" name="id" value="{{leader.id}}" aria-hidden="true" hidden>
                                     <button type="submit" class="btn btn-primary"></button>
                                 </form>
+                                <span></span>
                             </div>
                         </div>
                     {% endif %}
