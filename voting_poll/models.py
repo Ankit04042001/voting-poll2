@@ -28,3 +28,10 @@ class Audio(models.Model):
 
     def __str__(self):
         return f"Click Sound : {self.click_sound}"
+
+
+class UserIp(models.Model):
+    ip = models.CharField(max_length = 100)
+
+    def __str__(self):
+        return self.ip
