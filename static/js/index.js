@@ -30,13 +30,29 @@ if (timeleft < 0) {
 
 /********************** Adding Audio on Click *************************/
 
+const dot = document.querySelectorAll('.evm span');
 const audioElementTag = document.querySelector('#audio');
 const audioClickButton = document.querySelectorAll('.evm form button');
 const audio = audioElementTag.innerText;
 const music = new Audio(audio);
 
+function findIndex(btn){
+    index = 0;
+    for(b of audioClickButton){
+        if(b===btn){
+            return index;
+        }
+        else{
+            index = index + 1;
+        }
+    }
+}
+
 audioClickButton.forEach(function(btn){
     btn.addEventListener('click',function(){
         music.play();
+        btn.setAttribute("style","pointer-events:none;") ;
+        index = findIndex(btn);
+        dot[index].style.color = "green";
     });
 });

@@ -3,6 +3,7 @@ from django.http import request, HttpResponse
 from .models import Audio, TotalVote, Leader
 from django.contrib import messages
 from django.contrib.sessions.backends.db import SessionStore
+from django.db import transaction
 # Create your views here.
 
 def index(request):
@@ -15,6 +16,7 @@ def dashboard(request):
     leader = Leader.objects.all()
     return render(request, 'dashboard.html', {'leader':leader})
 
+@transaction.atomic
 def vote(request):
     leader = Leader.objects.all()
     if request.method == 'POST':
