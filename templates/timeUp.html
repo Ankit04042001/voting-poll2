@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/time_up.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <main>
+            Time Up. Result will show in 15 minutes.
+        </main>
+    </div>
+{% endblock %}

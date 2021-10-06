@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,UADM,CACN,IAAI,CAAA;EACA,WAAW,EAAC,IAAI;EAChB,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAC,MAAM;EAChB,WAAW,EAAE,GAAG;CACnB",
+    "sources": [
+        "time_up.scss"
+    ],
+    "names": [],
+    "file": "time_up.css"
+}

@@ -57,3 +57,7 @@ def csrf_failure(request, reason=""):
     return render(request,'cookie.html',ctx)
 
 
+
+def time_up(request):
+    return render(request,'timeUp.html')
+

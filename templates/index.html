@@ -27,7 +27,7 @@
                             <div class="col-1point5 nota">{{leader.order}}</div>
                             <div class="col-7point5 nota">{{leader.name}}</div>
                             <div class="col-3 nota evm">
-                                <form action="/vote/" method="POST">
+                                <form action="/time_up/" method="POST">
                                     {% csrf_token %}
                                     <input type="text" name="id" value="{{leader.id}}" aria-hidden="true" hidden>
                                     <button type="submit" class="btn btn-primary"></button>
@@ -48,7 +48,7 @@
                                 <img src="{{leader.nishan.url}}" alt="{{leader.name}} Chunav Chihn">
                             </div>
                             <div class="col-3 candidate evm">
-                                <form action="/vote/" method="POST">
+                                <form action="/time_up/" method="POST">
                                     {% csrf_token %}
                                     <input type="text" name="id" value="{{leader.id}}" aria-hidden="true" hidden>
                                     <button type="submit" class="btn btn-primary"></button>
