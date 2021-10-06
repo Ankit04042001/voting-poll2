@@ -1,6 +1,27 @@
-.container main {
-  padding: 20px;
-  font-size: 1.1rem;
-  font-weight: 400;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0;
+}
+
+.container main img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/********** responsie design *****************/
+@media (min-width: 750px) {
+  .container {
+    padding: 0;
+  }
+}
+
+@media (min-width: 980px) {
+  .container {
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=time_up.css.map */

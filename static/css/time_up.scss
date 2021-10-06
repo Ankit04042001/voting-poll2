@@ -1,7 +1,46 @@
+*{
+    padding:0;
+    margin:0;
+}
+
 .container{
+    padding:0;
     main{
-        padding:20px;
-        font-size:1.1rem;
-        font-weight: 400;
+        img{
+            width:100%;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+/********** responsie design *****************/
+
+$tab:750px;
+$desktop:980px;
+
+
+@mixin tab {
+    @media (min-width: #{$tab}){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+
+@include tab{
+    .container{
+        padding:0;
+        
+    }
+}
+
+@include desktop{
+    .container{
+        padding:0;
     }
 }
