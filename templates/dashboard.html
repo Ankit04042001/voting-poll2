@@ -21,8 +21,7 @@
     {% endfor %}
 {% endif %}
 <div class="container">
-<p>Vartual vote end</p>
-</p>यह पोल एक अनुमान मात्र था जिसके अनुसार विंदु देवी को ज्यादा वोट मिले</p>
+<p><b>Live Voting Counting</b></p>
 {% for leader in leader %}
   <div class="card mb-3">
       <div class="row g-0">
@@ -35,9 +34,7 @@
           <div class="card-body">
             <h5 class="card-title">{{leader.name}}</h5>
             {% if leader.nishan %}<p class="nishan">चुनाव चिह्न : <img src="{{leader.nishan.url}}" alt="{{leader.name}} Chunav Chihn"></p>{% endif %}
-            {% if request.session.isVoted == "yes" %}
               <p class="vote">वोट प्राप्त : {{leader.vote}}</p>
-            {% endif %}
           </div>
         </div>
       </div>
