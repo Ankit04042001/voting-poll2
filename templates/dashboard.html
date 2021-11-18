@@ -33,7 +33,7 @@
           <div class="card-body">
             <h5 class="card-title">{{leader.name}}</h5>
             {% if leader.nishan %}<p class="nishan">चुनाव चिह्न : <img src="{{leader.nishan.url}}" alt="{{leader.name}} Chunav Chihn"></p>{% endif %}
-              <p class="vote">वोट प्राप्त : {{leader.vote}}</p>
+              {% if request.session.isVoted == "yes" %}<p class="vote">वोट प्राप्त : {{leader.vote}}</p>{% endif %}
           </div>
         </div>
       </div>
