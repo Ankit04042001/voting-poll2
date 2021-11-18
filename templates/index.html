@@ -2,6 +2,8 @@
 {% load static %}
 {% load mathfilters %}
 {% block content %}
+The site has been closed for uncertain period.
+{% comment %} 
     <div class="container">
         <span id="audio">{{audio.first.click_sound.url}}</span>
     
@@ -60,7 +62,7 @@
                     {% endif %}
                 {% endfor %}
         </main>
-    </div> 
+    </div>  {% endcomment %}
 {% endblock %}
 
 {% block js %}
